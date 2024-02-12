@@ -1,3 +1,15 @@
+:root{
+    --primary-color: #FFFFFF;
+    --secondary-color: #45FEFE;
+    --primary-text-color: #000000;
+    --secondary-text-color: #666666;
+    --placeholder-text-color: #BDBDBD;
+    --input-back-color: #F6F6F6;
+    --input-border-color: #E8E8E8;
+
+    --text-font: 'Inter', sans-serif;
+}
+
 .flex {
     display: flex;
 }
@@ -6,7 +18,90 @@
     flex-direction: row;
 }
 
+.flex-column {
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 375px;
+    height: 812px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    padding-bottom: 15px;
+}
+
+.highlight-header {
+    font-family: var(--text-font);
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--primary-text-color);
+}
+
 .input-text {
-    background-color: #F6F6F6;
-    border: 2px solid #BDBDBD;
+    background-color: var(--input-back-color);
+    border: 1px solid var(--input-border-color);
+    outline: none;
+    border-radius: 5px;
+    width: 343px;
+    height: 50px;
+    margin: 8px;
+    font-family: var(--text-font);
+    font-size: 16px;
+
+    ::placeholder {
+        font-family: var(--text-font);
+        font-size: 16px;
+        color: var(--placeholder-text-color);
+    }
+}
+
+.checkbox-label {
+    margin: 8px;
+    cursor: pointer;
+}
+
+.checkbox-custom {
+    display: inline-block;
+    background-color: #E8E8E8;
+    cursor: pointer;
+    border: 1px solid var(--input-border-color);
+    font-family: var(--text-font);
+    font-size: 14px;
+    color: var(--primary-text-color);
+}
+
+.primary-button {
+    width: 343px;
+    height: 50px;
+    font-family: var(--text-font);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    color: var(--primary-text-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 8px;
+    background-color: var(--secondary-color);
+}
+
+.secondary-button {
+    width: 343px;
+    height: 50px;
+    font-family: var(--text-font);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-text-color);
+    border-radius: 50px;
+    border: solid 4px var(--secondary-color);
+    outline: none;
+    cursor: pointer;
+    margin: 8px;
+    background-color: var(--primary-color);
 }
